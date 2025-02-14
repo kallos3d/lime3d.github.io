@@ -1,0 +1,176 @@
+/* Import Fontu Inter zo služby Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Reset pre všetky elementy */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Základné nastavenia pre telo stránky */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212; /* Tmavé pozadie */
+    color: #E0E0E0; /* Svetlý text pre čitateľnosť */
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Hlavička stránky s logom a menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1F1F1F;
+    padding: 20px 30px;
+    border-bottom: 2px solid #333;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #B0B0B0;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FF4081;
+}
+
+/* Sidebar pre navigáciu v dokumentácii */
+.docs-sidebar {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: #2A2A2A;
+    padding: 20px;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+.docs-sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.docs-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.docs-sidebar ul li {
+    margin: 15px 0;
+}
+
+.docs-sidebar ul li a {
+    text-decoration: none;
+    color: #B0B0B0;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.docs-sidebar ul li a:hover {
+    color: #FF4081;
+}
+
+/* Hlavná sekcia dokumentácie */
+section {
+    margin-left: 270px;
+    padding: 20px 30px;
+    background-color: #121212;
+    flex-grow: 1;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #B0B0B0;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Tlačidlá */
+button {
+    background-color: #FF4081;
+    color: #FFFFFF;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #D500F9;
+}
+
+/* Footer */
+footer {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #A0A0A0;
+}
+
+/* Zlepšenie boxov, divov a layoutov */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Základné pravidlá pre všetky odkazy */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #FF4081;
+}
+
