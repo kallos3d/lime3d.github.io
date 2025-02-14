@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lime3D - Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Logo and Navbar -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Lime3D Logo" class="logo">
+            <h1>Lime3D</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="repository.html">Repository</a>
+            <a href="docs.html">Docs</a>
+            <a href="news.html">News</a>
+        </nav>
+    </header>
+
+    <!-- Documentation Sidebar -->
+    <div class="docs-sidebar">
+        <h3>Documentation Categories</h3>
+        <ul>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#compilation">Compilation</a></li>
+            <li><a href="#getting-into-code">Getting Lime3D into Code</a></li>
+        </ul>
+    </div>
+
+    <!-- Documentation Content -->
+    <div class="docs-content">
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+            <p>
+                Welcome to Lime3D! Lime3D is an open-source GPU rendering library that allows you to integrate GPU acceleration in your applications. Below is a basic introduction to set up and use Lime3D.
+            </p>
+            <h3>Prerequisites</h3>
+            <p>Make sure your development environment is ready with the following:</p>
+            <ul>
+                <li>Linux, Mac, or Windows operating systems supported.</li>
+                <li>GNU Compiler Collection (GCC) or Clang for Linux/Mac, Visual Studio for Windows.</li>
+                <li>CMake for building the project.</li>
+                <li>Make for building the project.</li>
+            </ul>
+            <h3>Step 1: Clone the Repository</h3>
+            <p>
+                First, clone the Lime3D repository using Git:
+            </p>
+            <pre><code>git clone https://github.com/yourusername/lime3d.git</code></pre>
+            <p>This will download the entire Lime3D project to your local machine.</p>
+
+            <h3>Step 2: Install Dependencies</h3>
+            <p>You need to install a few dependencies to ensure Lime3D works correctly. These are necessary for building and running the project. If you're on Linux, you can install them using apt:</p>
+            <pre><code>sudo apt-get install build-essential cmake libglew-dev</code></pre>
+            <p>If you're on Windows, install **MinGW** or **Visual Studio** for compiling, and ensure **CMake** is installed.</p>
+
+            <h3>Step 3: Build Lime3D</h3>
+            <p>Once you've cloned the repository and installed dependencies, you can now build Lime3D:</p>
+            <pre><code>cd lime3d
+mkdir build && cd build
+cmake ..
+make</code></pre>
+            <p>The `make` command will compile Lime3D using GCC, ensuring all components are built.</p>
+
+            <h3>Step 4: Install Lime3D</h3>
+            <p>After building, you can install Lime3D on your system with:</p>
+            <pre><code>sudo make install</code></pre>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <h3>Getting Lime3D Installed on Your System</h3>
+            <p>Lime3D can be easily installed on your system after cloning the repository and setting up your development environment.</p>
+            <h3>Installation Steps</h3>
+            <ul>
+                <li>Ensure all dependencies are installed. If using Linux, use apt for installing packages like build-essential, CMake, and GLEW.</li>
+                <li>Clone the repository using Git:</li>
+                <pre><code>git clone https://github.com/yourusername/lime3d.git</code></pre>
+                <li>Navigate to the directory and create a build directory:</li>
+                <pre><code>cd lime3d
+mkdir build</code></pre>
+                <li>Run CMake to generate necessary build files:</li>
+                <pre><code>cmake ..</code></pre>
+                <li>Now, compile the source code with:</li>
+                <pre><code>make</code></pre>
+                <li>To install Lime3D system-wide, use:</li>
+                <pre><code>sudo make install</code></pre>
+            </ul>
+        </section>
+
+        <section id="compilation">
+            <h2>Compilation</h2>
+            <h3>How to Compile Lime3D from Source</h3>
+            <p>To compile Lime3D from the source code, follow the steps outlined below. This includes building the project and ensuring it’s ready to use in your applications.</p>
+            <h3>Step 1: Clone the Repository</h3>
+            <p>Start by cloning the Lime3D repository:</p>
+            <pre><code>git clone https://github.com/yourusername/lime3d.git</code></pre>
+
+            <h3>Step 2: Install Dependencies</h3>
+            <p>Make sure all the necessary dependencies are installed. These dependencies are important for compiling Lime3D:</p>
+            <pre><code>sudo apt-get install build-essential cmake libglew-dev</code></pre>
+            <p>For Windows, ensure you have installed **MinGW** or **Visual Studio**, along with **CMake**.</p>
+
+            <h3>Step 3: Build the Project</h3>
+            <p>Once the dependencies are set up, navigate to the Lime3D directory and run the following commands:</p>
+            <pre><code>cd lime3d
+mkdir build && cd build
+cmake ..
+make</code></pre>
+            <p>The `make` command compiles the Lime3D project using **GCC** or **Clang** (depending on your OS).</p>
+
+            <h3>Step 4: Install Lime3D</h3>
+            <p>After successful compilation, install Lime3D using the command:</p>
+            <pre><code>sudo make install</code></pre>
+        </section>
+
+        <section id="getting-into-code">
+            <h2>Getting Lime3D into Code</h2>
+            <p>Once you have Lime3D installed and compiled, you can start integrating it into your code. This section will show you how to link Lime3D to your project.</p>
+
+            <h3>Step 1: Include Lime3D in Your Project</h3>
+            <p>To use Lime3D in your code, include the necessary header files in your source code:</p>
+            <pre><code>#include <lime3d.h></code></pre>
+
+            <h3>Step 2: Initialize Lime3D</h3>
+            <p>You need to initialize Lime3D before you can use its functions. Add this line of code at the beginning of your program:</p>
+            <pre><code>Lime3D::init();</code></pre>
+
+            <h3>Step 3: Start Using Lime3D Functions</h3>
+            <p>Now you're ready to call Lime3D functions. For example, to render a 3D object:</p>
+            <pre><code>Lime3D::render();</code></pre>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lime3D. All rights reserved.</p>
+    </footer>
+</body>
+</html>
